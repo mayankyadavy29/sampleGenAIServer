@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"runtime"
-	"strconv"
 )
 
 func main() {
@@ -15,11 +14,11 @@ func main() {
 	fmt.Printf("Number of Running Goroutines: %d\n", numGoroutines)
 	fmt.Printf("Progress Bar:\n")
 	for i := 1; i <= maxPrime; i++ {
-		ascii := strconv.Itoa(i)
+		//ascii := strconv.Itoa(i)
 		newInfo := Info{
-			Name:        ascii + ascii + ascii,
-			PhNumber:    []int{i, i},
-			Email:       []string{ascii, ascii},
+			//Name:        ascii + ascii + ascii,
+			//PhNumber:    []int{i, i},
+			//Email:       []string{ascii, ascii},
 			PrimeNumber: i,
 		}
 		workerPool.inCh <- newInfo
